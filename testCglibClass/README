@@ -1,0 +1,73 @@
+---------------------testCGLib output--------------------- 
+filter method2 ==1
+filter method3 ==2
+filter method1 ==0
+filter method4 ==3
+&&&intercept method1调用前
+TargetObject:method1 mmm1
+&&&intercept method1调用前
+---main: method1(mmm1)
+mmm1
+TargetObject:method2 200
+---main: method2(200)
+200
+锁定结果
+---main: method3(310)
+999
+锁定结果
+---main: method3(20)
+999
+&&& Other intercept method4调用前
+TargetObject:method4 400
+&&& Other intercept method4调用后
+---main:method4(400)
+400
+other method except filter method
+&&&intercept equals调用前
+&&&intercept equals调用前
+---main:targetObject2.equals(null) 
+false
+---main: targetObject2.getClass() 
+class cglib.cglib.TargetObject$$EnhancerByCGLIB$$fa9618dd
+&&&intercept hashCode调用前
+&&&intercept hashCode调用前
+---main: targetObject2.hashCode() 
+1268447657
+&&&intercept toString调用前
+&&&intercept toString调用前
+---main: targetObject2.toString() 
+TargetObject []class cglib.cglib.TargetObject$$EnhancerByCGLIB$$fa9618dd
+
+---------------------testLazyBean output--------------------- 
+lazy bean init
+tom
+18
+before lazyLoader...
+after lazyLoader...
+zghw
+TargetObject []class cglib.cglib.TargetObject
+after...
+zghw
+before Dispatcher...
+after Dispatcher...
+xxx0
+before Dispatcher...
+after Dispatcher...
+TargetObject []class cglib.cglib.TargetObject
+after...
+before Dispatcher...
+after Dispatcher...
+xxx2
+---------------------TestInterfaceMaker output--------------------- 
+toString
+method1
+method3
+method4
+method2
+###net.sf.cglib.empty.Object$$InterfaceMakerByCGLIB$$5674cd4d
+###true
+--------
+filter method3 
+3333
+filter method1 
+mmmmmmmmm
