@@ -10,7 +10,7 @@
 	<name>spring-aop-aspect</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<spring.version>3.2.4.RELEASE</spring.version>
+		<spring.version>5.2.7.RELEASE</spring.version>
 	</properties>
 	<dependencies>
 		<dependency>
